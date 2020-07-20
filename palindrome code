@@ -1,0 +1,42 @@
+// program to check whether a string is palindrome or not
+#include <stdio.h>
+int main() {
+     char str[30];
+     int l,i;
+     printf("Enter a string");
+     gets(str);
+     
+     l=strlen(str);
+     for(i=0;i<l/2;i++);
+       if(str(i)!=str(l-1-i){
+           printf("Not a palindrome");
+           break;
+       }
+    if(i==l/2)
+       printf("Palindrome);
+}       
+       
+
+//program to check whether a number is palindrome or not
+#include <stdio.h>
+int main() {
+    int n, reversedN = 0, remainder, originalN;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    originalN = n;
+
+    // reversed integer is stored in reversedN
+    while (n != 0) {
+        remainder = n % 10;
+        reversedN = reversedN * 10 + remainder;
+        n /= 10;
+    }
+
+    // palindrome if orignalN and reversedN are equal
+    if (originalN == reversedN)
+        printf("%d is a palindrome.", originalN);
+    else
+        printf("%d is not a palindrome.", originalN);
+
+    return 0;
+}
